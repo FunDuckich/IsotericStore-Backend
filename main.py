@@ -3,7 +3,8 @@ from routers import (users_router,
                      goods_router,
                      services_router,
                      orders_router,
-                     ordered_products_router, )
+                     ordered_products_router,
+                     shopping_carts_router)
 
 app = FastAPI(
     title='IsotericStore',
@@ -14,5 +15,4 @@ app.include_router(goods_router)
 app.include_router(services_router)
 app.include_router(orders_router)
 app.include_router(ordered_products_router)
-
-# имбуля
+app.include_router(shopping_carts_router)
